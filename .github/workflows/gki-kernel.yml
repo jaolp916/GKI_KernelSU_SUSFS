@@ -45,6 +45,14 @@ on:
         required: true
         type: boolean
         default: true
+      baseband_guard:
+        required: true
+        type: boolean
+        default: false
+      ssg_rekernel_enable:
+        required: true
+        type: boolean
+        default: true
       supp_op:
         required: true
         type: boolean
