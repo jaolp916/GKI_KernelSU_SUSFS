@@ -36,6 +36,16 @@ on:
         required: true
         type: boolean
         default: true
+      baseband_guard:
+        description: '内核防格)'
+        required: true
+        type: boolean
+        default: true
+      ssg_rekernel_enable:
+        description: '是否启用三星SSG IO调度器及Re-Kernel支持(0=均不安装,1=安装SSG IO调度器,2=安装Re-Kernel,3=均安装,默认1)'
+        required: true
+        type: boolean
+        default: true
       onlyAk3:
         description: '仅上传AK3压缩包?(无boot,下载更快)'
         required: false
@@ -101,6 +111,8 @@ jobs:
       version: ${{ inputs.version || '' }}
       use_zram: ${{ inputs.use_zram }}
       use_kpm: ${{ inputs.use_kpm }}
+      baseband_guard: ${{ inputs.baseband_guard }}
+      ssg_rekernel_enable: ${{ inputs.ssg_rekernel_enable }}
       supp_op: ${{ inputs.supp_op || false }}
       fast: ${{ inputs.fast || false }}
       onlyAk3: ${{ inputs.onlyAk3 || false }}
