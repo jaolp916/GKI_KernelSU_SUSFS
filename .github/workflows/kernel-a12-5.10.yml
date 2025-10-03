@@ -36,11 +36,6 @@ on:
         required: true
         type: boolean
         default: true
-      better_net:
-        description: '网络'
-        required: true
-        type: boolean
-        default: true
       baseband_guard:
         description: '内核防格)'
         required: true
