@@ -36,6 +36,11 @@ on:
         required: true
         type: boolean
         default: true
+      better_net:
+        description: '网络'
+        required: true
+        type: boolean
+        default: true
       baseband_guard:
         description: '内核防格)'
         required: true
@@ -111,6 +116,7 @@ jobs:
       version: ${{ inputs.version || '' }}
       use_zram: ${{ inputs.use_zram }}
       use_kpm: ${{ inputs.use_kpm }}
+      better_net: ${{ inputs.better_net }}
       baseband_guard: ${{ inputs.baseband_guard }}
       ssg_rekernel_enable: ${{ inputs.ssg_rekernel_enable }}
       supp_op: ${{ inputs.supp_op || false }}
