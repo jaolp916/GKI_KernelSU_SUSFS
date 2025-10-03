@@ -116,9 +116,8 @@ jobs:
       version: ${{ inputs.version || '' }}
       use_zram: ${{ inputs.use_zram }}
       use_kpm: ${{ inputs.use_kpm }}
-      better_net: ${{ github.event.inputs.better_net }}
       baseband_guard: ${{ inputs.baseband_guard }}
-      ssg_rekernel_enable: ${{ env.ssg_enable }}
+      ssg_rekernel_enable: ${{ inputs.ssg_rekernel_enable }}
       supp_op: ${{ inputs.supp_op || false }}
       fast: ${{ inputs.fast || false }}
       onlyAk3: ${{ inputs.onlyAk3 || false }}
